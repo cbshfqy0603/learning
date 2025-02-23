@@ -2,6 +2,7 @@ package ProcessControl;
 
 public class IfDemo {
     public static void main(String[] args) {
+        //流程控制有三种结构：顺序结构 分支结构 循环结构 顺序结构不多赘述 直接从分支结构开始
         //if语句有三种格式：(1)单分支(2)双分支(3)多分支
         //单分支
         //(1)大括号可以另外起一行进行书写，但是建议就写在第一行后面
