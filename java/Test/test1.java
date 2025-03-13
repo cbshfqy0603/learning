@@ -22,27 +22,27 @@ public class test1 {
         if (month >= 5 && month <= 10) {
             //旺季
             // 再继续判断是头等舱还是经济舱
-            if (seat == 0) {
-                ticket = (int) (ticket * 0.85);
-            } else if (seat == 1) {
-                ticket = (int) (ticket * 0.9);
-            } else {
-                System.out.println("对不起，您输入的舱位信息不合法");
-            }
+            //注意此处可以直接使用idea快捷键ctrl + L + M直接抽取方法(小插曲:再加个回车)
+            ticket = getTicket(seat, ticket, 0.85, 0.9);
         } else if ((month >= 1 && month <= 4) || (month >= 11 && month <= 12)) {
             //淡季
             //再继续判断是头等舱还是经济舱
-            if (seat == 0) {
-                ticket = (int) (ticket * 0.65);
-            } else if (seat == 1) {
-                ticket = (int) (ticket * 0.7);
-            } else {
-                System.out.println("对不起，您输入的舱位信息不合法");
-            }
+            ticket = getTicket(seat, ticket, 0.65, 0.7);
         } else {
             System.out.println("对不起，您输入的月份信息不合法");
         }
         //输出票价
         System.out.println("您的机票价格是:" + ticket);
+    }
+
+    private static int getTicket(int seat, int ticket, double x, double x1) {
+        if (seat == 0) {
+            ticket = (int) (ticket * x);
+        } else if (seat == 1) {
+            ticket = (int) (ticket * x1);
+        } else {
+            System.out.println("对不起，您输入的舱位信息不合法");
+        }
+        return ticket;
     }
 }
