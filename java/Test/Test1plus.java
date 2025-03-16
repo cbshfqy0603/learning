@@ -2,7 +2,7 @@ package Test;
 
 import java.util.Scanner;
 
-public class Test1plus {
+public class Test1Plus {
     public static void main(String[] args) {
         /*
         机票价格按照淡季旺季，头等舱经济舱来进行收费 输入机票原价，月份，舱位信息

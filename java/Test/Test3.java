@@ -25,7 +25,6 @@ public class Test3 {
             result = result + chs[randomIndex];
         }
         //随机0-9
-        //
         int number = r.nextInt(10);
         result = result + number;
         System.out.println(result);
