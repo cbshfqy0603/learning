@@ -5,7 +5,7 @@ public class ArithmeticoperatorDemo3 {
         //隐式转换（自动类型提升）
         //隐式转换的两种规则：
         //（1）取值范围小的和取值范围大的进行运算，小的会先提升为大的再进行运算、
-        //（2）byte short int 在进行运算的时候都会先提升为int，再就进行运算
+        //（2）byte short char 进行运算的时候都会先提升为int，再就进行运算
         //取值范围从小到大：byte short int long float double
         //什么时候进行转换：数据类型不一样，需要进行转化才能进行运算
         //实例：
