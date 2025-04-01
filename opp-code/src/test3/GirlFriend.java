@@ -20,6 +20,7 @@ public class GirlFriend {
         //等号右边：局部变量表示调用方法传递过来的数据（满足就近原则:谁近我就用谁）
         //等号左边：表示成员位置的name
         //就近原则：this的作用：区分成员变量和全局变量
+        //this的本质：代表方法调用者的地址值
 //        System.out.println(name);这个没有this关键字 先找局部变量 再找成员变量
 //        System.out.println(this.name);有this关键字 直接找成员变量
         this.name = name;
