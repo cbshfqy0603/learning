@@ -12,6 +12,9 @@ public class StringDemo1 {
     public static void main(String[] args) {
         //创建String对象的两种方式：
         //（1）使用直接赋值的方式来获取一个字符串对象
+        //当使用双引号直接赋值的时候，系统会自动检查该字符串在串池（StringTable）中是否存在
+        //不存在：创建新的
+        //存在：复用
         String s1 = "abc";
         System.out.println(s1);//abc
         //（2）使用new关键字 + 构造方法
@@ -22,10 +25,14 @@ public class StringDemo1 {
         String s3 = new String("abc");
         System.out.println(s3);//abc
         //传递一个字符数组，根据传递的字符数组的内容再创建一个新的字符串对象
+        //需求：修改字符串内容 abcd -> Qbcd
+        //abcd -> {'a', 'b', 'c', 'd'} -> {'Q', 'b', 'c', 'd'} -> Qbcd
         char[] chs = {'a', 'b', 'c', 'd'};
         String s4 = new String(chs);
         System.out.println(s4);//abcd
         //传递一个字节数组，根据传递的字节数组的内容在创建一个字符串对象
+        //应用场景：以后再网络中传输的信息其实都是字节信息
+        //我们需要把季节信息进行转换，转成字符串，此时就需要用到这个构造了
         byte[] bytes = {97, 98, 99, 100};
         //byte[] bytes = {65, 66, 67, 68};
         String s5 = new String(bytes);
