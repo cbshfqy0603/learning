@@ -46,8 +46,7 @@ public class StringDemo9 {
     public static boolean judgePhoneNumber(String phoneNumber) {
         if (phoneNumber.length() != 11) {
             return false;
-        } else {
-            return true;
         }
+        return true;
     }
 }
