@@ -1,6 +1,6 @@
 package Test;
 
-public class Test2Case1 {
+public class Test2Case2 {
     public static void main(String[] args) {
         //需求：给定字符串，A和B
         //A的旋转操作就是将A的最左边字符移动到最右边
@@ -38,12 +38,20 @@ public class Test2Case1 {
         //可以有两个方法：
         //1.用substring进行截取，把左边的字符串截取出来拼接到右边去
         //2.可以把字符串先变成一个字符数组，然后调整字符数组里面的数据，最后再把字符数组变成字符串
-        //Case1利用思路一：截取
-        //首先获取第一个字符
-        char first = str.charAt(0);
-        //再获取剩余的部分 -> 从第一个字符开始截取到末尾
-        String end = str.substring(1);
-        //将末尾部分和第一个字符进行拼接就可以实现旋转的效果
-        return end + first;
+        //Case2利用思路二：首先把字符串先变成字符数组，然后调整字符数组里面的数据，最后再把字符数组变成字符串
+        //首先利用toCharArray()方法将字符串转换为字符数组
+        char[] arr = str.toCharArray();
+        //取出字符数组第一个元素、
+        char first = arr[0];
+        //调整字符数组里面元素的顺序
+        //[A, B, C, D] -> [B, C, D, D]
+        for (int i = 1; i < arr.length; i++) {
+            arr[i - 1] = arr[i];
+        }
+        //把第一个元素放到最后
+        arr[arr.length - 1] = first;
+        //利用new String(char[] arr)构造方法，把字符数组弄成字符串
+        String result = new String(arr);
+        return result;
     }
 }
