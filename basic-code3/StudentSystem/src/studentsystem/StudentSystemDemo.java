@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 //需求：采用控制台的方式去书写学生管理系统
 public class StudentSystemDemo {
-    public static void main(String[] args) {
+    public static void studentSystem() {
         //创建列表集合
         ArrayList<Student> list = new ArrayList<>();
         //快捷键：ctrl + alt + t
