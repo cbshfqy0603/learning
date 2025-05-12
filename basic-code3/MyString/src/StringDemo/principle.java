@@ -25,7 +25,7 @@ public class principle {
         //JDK8以前：系统底层会自动创建一个StringBuilder对象，然后再调用其append方法完成拼接
         //拼接后，再调用其toString方法转换为String类型，而toString方法的底层是直接new了一个字符串对象
         //JDK8版本及以后：
-        //系统会预估哟啊字符串拼接之后的总大小，把要拼接的内容放在数组之中，此时也是产生了以恶搞新的字符串
+        //系统会预估字符串拼接之后的总大小，把要拼接的内容放在数组之中，此时也是产生了新的字符串
         String s4 = "abc";
         String s5 = "a" + "b" + "c";
         System.out.println(s4 == s5);//true
