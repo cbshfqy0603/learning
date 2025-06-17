@@ -10,6 +10,6 @@ public class Student {
     static String teacherName;
 
     public void show() {
-        
+        //...略
     }
 }

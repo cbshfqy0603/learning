@@ -2,8 +2,8 @@ package ArrayList;
 
 import java.util.ArrayList;
 //复习 String的常用方法：length(), charAt(), equals(), equalsIgnoreCase(), substring(), replace()
-//复习 StringBuilder的常用方法：append(), reverse(), length()
-//复习 StringJoiner的常用方法：add()
+//复习 StringBuilder的常用方法：append(), reverse(), length(), toString()
+//复习 StringJoiner的常用方法：add(), length(), toString()
 //对比 ArrayList的常用方法：add(), remove(), set(), get() and size()
 //集合和数组对比；
 //（1）长度：数组长度固定，集合的长度可变
